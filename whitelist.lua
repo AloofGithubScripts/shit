@@ -1,7 +1,6 @@
 wl = {
-  "";
   Blacklists = {
     
-  }
+  },
 }
 return wl
