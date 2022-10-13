@@ -1,6 +1,0 @@
-wl = {
-  Blacklists = {
-    
-  },
-}
-return wl
