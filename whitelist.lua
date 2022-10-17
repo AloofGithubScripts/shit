@@ -1,7 +1,1 @@
-e = {
-  ""
-  Blacklists = {
-    "41d708c084a67a194697922822a51871222ad8935bf29aadef41193e7e3239afd28377320fb329f8c8abd3c8452e2fed4ec495b1d1962d223558ab29dfd6efeb"
-  },
-}
-return e
+
