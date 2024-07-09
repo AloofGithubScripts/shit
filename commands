@@ -1,5 +1,3 @@
-prefix = "-"
-
 -- loading
 repeat
     task.wait()
