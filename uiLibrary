@@ -1,8 +1,8 @@
-    local inserted = Instance.new("ScreenGui")
-    inserted.Name = "inserted"
-    inserted.Parent = game:GetService("CoreGui")
+local inserted = Instance.new("ScreenGui")
+inserted.Name = "inserted"
+inserted.Parent = game:GetService("CoreGui")
 
-local notif = {}
+local notifUI = {}
 
 function notifUI:Create(UIName,Text,Timing,Position)
 
