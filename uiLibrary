@@ -4,7 +4,7 @@
 
 local notif = {}
 
-function notif:Create(UIName,Text,Timing,Position)
+function notifUI:Create(UIName,Text,Timing,Position)
 
     local localGui = Instance.new("Frame")
     localGui.Parent = inserted
