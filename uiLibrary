@@ -38,3 +38,4 @@ function notifUI:Create(UIName,Text,Timing,Position)
 
     return localGui
 end
+return notifUI
