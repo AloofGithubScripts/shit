@@ -4,15 +4,15 @@ inserted.Parent = game:GetService("CoreGui")
 
 local notifUI = {}
 
-function notifUI:Create(UIName,Text,Timing,Position)
+function notifUI:Create(UIName, Text, Position)
 
     local localGui = Instance.new("Frame")
     localGui.Parent = inserted
-    localGui.Name = UIName
-    localGui.AnchorPoint = Vector2.new(0.5,0.5)
+    localGui.Name = UIName or "Default"
+    localGui.AnchorPoint = Vector2.new(0.5, 0.5)
     localGui.BackgroundColor3 = Color3.new(0.152941, 0.152941, 0.152941)
     localGui.BorderSizePixel = 0
-    localGui.Position = UDim2.new(2,0,Position,0)
+    localGui.Position = UDim2.new(2, 0, Position, 0)
     localGui.Size = UDim2.new(0, 236, 0, 51)
 
     local localCorner = Instance.new("UICorner")
@@ -23,7 +23,7 @@ function notifUI:Create(UIName,Text,Timing,Position)
     localScale.Parent = localGui
     localScale.Scale = 0.9
 
-    local localText =  Instance.new("TextLabel")
+    local localText = Instance.new("TextLabel")
     localText.Parent = localGui
     localText.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
     localText.BackgroundTransparency = 1.000
@@ -36,6 +36,17 @@ function notifUI:Create(UIName,Text,Timing,Position)
     localText.TextColor3 = Color3.fromRGB(255, 255, 255)
     localText.TextSize = 26.000
 
+    -- Rainbow effect coroutine
+    coroutine.wrap(function()
+        while true do
+            for hue = 0, 1, 0.01 do
+                localText.TextColor3 = Color3.fromHSV(hue, 1, 1)
+                wait(0.05) -- Adjust the speed of the color change
+            end
+        end
+    end)()
+
     return localGui
 end
+
 return notifUI
